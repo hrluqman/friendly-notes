@@ -1,9 +1,9 @@
-# Friendly-notes
+# 📖  Friendly-notes
 
 A simple add notes project which save the data in your local storage which several functions such as add, delete and search. 
 Built with <a href="https://angular.io/">Angular</a> and <a href="https://capacitorjs.com/docs/getting-started/with-ionic">Capacitor</a> with <a href="https://ionicframework.com/">Ionic Framework</a>.
 
-## Available Scripts
+## 🚀 Available Scripts
 
 ### `ionic serve`
 
