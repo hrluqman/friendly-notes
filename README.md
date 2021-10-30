@@ -5,7 +5,7 @@ Built with <a href="https://angular.io/">Angular</a> and <a href="https://capaci
 
 ## 🚀 Preview
 
-* <a href="https://friendly-notes.web.app/">Live Demo</a>
+* <a href="https://friendly-notes.web.app/" target="_blank">Live Demo</a>
 
 ## 🚀 Available Scripts
 
