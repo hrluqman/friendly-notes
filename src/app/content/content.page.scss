@@ -1,0 +1,49 @@
+.notes-container {
+    width: 50vw;
+    margin: 16px auto;
+}
+
+.newNotes-container {
+    --border-style: none;
+    --highlight-color-focused: none;
+    --highlight-background: none;
+    ion-label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    ion-input, ion-textarea {
+        --background: #EDEDED;
+        padding: 8px 0;
+        border-radius: 8px;
+        --padding-start: 16px;
+    }
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 16px;
+    ion-button {
+        width: 45%;
+        --background: rgba(255,143,228,1);
+        cursor: pointer;
+    }
+    ion-button:last-child {
+        --background: #0bc9ff;
+    }
+}
+  
+@media screen and (max-width: 1024px) {
+    .notes-container {
+      width: 70vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .notes-container {
+      width: 90vw;
+    }
+}

@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>New Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="notes-container">
+    <ion-item class="newNotes-container">
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="notesData.title"></ion-input>
+    </ion-item>
+  
+    <ion-item class="newNotes-container">
+      <ion-label position="stacked">Content</ion-label>
+      <ion-textarea rows="6" placeholder="Enter notes here..." [(ngModel)]="notesData.content"></ion-textarea>
+    </ion-item>
+
+    <div class="btn-container">
+      <ion-button size="small" expand="block" routerLink="/notes">Cancel</ion-button>
+      <ion-button size="small" expand="block" (click)="saveNote()">Save</ion-button>
+    </div>
+  </div>
+
+</ion-content>

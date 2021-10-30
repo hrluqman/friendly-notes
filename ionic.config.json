@@ -1,0 +1,7 @@
+{
+  "name": "Friendly Notes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,104 @@
+.notes-container {
+  width: 50vw;
+  margin: 0 auto;
+  max-height: 100vh;
+  position: relative;
+  ion-searchbar {
+    --box-shadow: none;
+    --background: #EDEDED;
+    --border-radius: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background: white;
+    padding: 20px 0;
+  }
+
+  .notes-content {
+    border-radius: 8px;
+    cursor: pointer;
+    .notes-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+  
+      ion-icon:hover {
+        cursor: pointer;
+        color: rgba(255,143,228,1);
+      }
+    }
+  }
+}
+
+.add-note {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  p {
+    background: #0bc9ff;
+    width: 30%;
+    margin: 0;
+    padding: 12px 16px;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease-out;
+    border-radius: 8px;
+  }
+}
+
+.add-note:hover p {
+  background: #9494f2;
+}
+
+.empty-notes {
+  width: 50vw;
+  margin: 0 auto;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    max-width: 20rem;
+  }
+  p {
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 600;
+
+    span {
+      color: #9494f2;
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .notes-container {
+    width: 70vw;
+  }
+  .add-note {
+    bottom: 0;
+    p {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .notes-container {
+    width: 90vw;
+  }
+  .add-note p {
+    width: 100%;
+    text-align: center;
+  }
+}

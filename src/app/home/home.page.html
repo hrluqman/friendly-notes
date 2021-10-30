@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Friendly Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="notes-container">
+    <ion-searchbar mode="md" placeholder="Search by title" [(ngModel)]="searchKeyword" (ionChange)="filterNotes()"></ion-searchbar>
+
+    <div *ngIf="allNotes.length!==0 && filteredNote.length==0 && searchKeyword==''">
+      <ion-card class="notes-content" *ngFor="let note of allNotes">
+        <ion-card-header>
+          <ion-card-title class="notes-title">{{note.title}}<ion-icon id="{{note.id}}" name="trash" (click)="askToDelete($event)"></ion-icon></ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>{{note.content}}</ion-card-content>
+      </ion-card>
+    </div>
+
+    <div *ngIf="filteredNote.length!==0">
+      <ion-card class="notes-content" *ngFor="let note of filteredNote">
+        <ion-card-header>
+          <ion-card-title class="notes-title">{{note.title}}<ion-icon id="{{note.id}}" name="trash" (click)="askToDelete($event)"></ion-icon></ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>{{note.content}}</ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="empty-notes" *ngIf="allNotes.length==0">
+      <img src="./assets/imgs/add_note.svg">
+      <p>Looks like you haven't create any notes yet.</p>
+    </div>
+
+    <div class="empty-notes" *ngIf="filteredNote.length==0 && searchKeyword!==''">
+      <img src="./assets/imgs/empty.svg">
+      <p>Can't find any. Are you sure you meant <span>{{searchKeyword}}</span>?</p>
+    </div>
+    
+  </div>
+
+  <div class="add-note"><p routerLink="/addnew" routerDirection="forward">+Add</p></div>
+
+  
+</ion-content>
